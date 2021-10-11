@@ -6,8 +6,8 @@ require_once('models/categoryModel.php');
 //appel des méthode générée dans le model.php''
 
 //exemple
-$oRange = new Category('voila', 'texte bien écrit qui donne envie', '00009');
-$oRange->pushCategory($categories);
+/*$oRange = new Category('voila', 'texte bien écrit qui donne envie', '00009');
+$oRange->pushCategory($categories);*/
 
 
 //var_dump($categories);

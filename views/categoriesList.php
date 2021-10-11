@@ -47,7 +47,6 @@ $categories = array(
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 
-    <link rel="icon" type="image/png" sizes="16x16" href="horde.png">
     <title>IKESLA</title>
 </head>
 
@@ -58,7 +57,7 @@ $categories = array(
         <div class="container justify-content-center">
             <div class="row d-flex justify-content-center">
                 <?php if(count($categories)>0): ?>
-                    <a class="btn btn-info" href="categoryForm.php">Ajouter une nouvelle catégorie”</a>
+                    <a class="btn btn-success" href="categoryForm.php">Ajouter une nouvelle catégorie</a>
                 <table>
                     <?php
 
