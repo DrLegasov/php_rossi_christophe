@@ -1,0 +1,71 @@
+
+
+
+Le constructeur est lié à une classe créée au préalable qui est une sorte de modèle, de patron où sont définis des paramètre propres à la classe.
+Le constructeur est déclaré de la manière suivante --> function __construct() {} <--
+Un constructeur permet de créer des méthode en son sein.
+
+class Voitures
+            {
+// déclaration d'une propriété
+            public $brand;
+            public $range;
+            public $releaseDate;
+            public $power;
+            public $cost;
+
+//création du constructeur
+/**
+ * __construct
+ *
+ * @param  string $brand
+ * @param  string $range
+ * @param  string/date $releaseDate
+ * @param  int $power
+ * @param  int $cost
+ * @return 
+ */
+//attention à l'écriture exacte "_"x2 puis "construct"
+public function __construct($brand, $range, $releaseDate, $power, $cost) {
+
+        $this->brand = $brand;
+        $this->range = $range;
+        $this->releaseDate = $releaseDate;
+        $this->power = $power;
+        $this->cost = $cost;
+    }
+
+//le getter comme son nom l'indique permet d'isoler et récupérer la valeur donnée à un objet de la classe susnommée. 
+l'exemple suivant va permettre de récupérer la valeur string d'une marque 'brand'.
+
+/**
+ * getbrand
+ *
+ * @return string
+ */
+public function getbrand() {
+    return $this->brand;
+
+//le setter permet la modification d'une valeur d'objet, ci-dessous une marque de voiture
+
+/**
+ * setbrand
+ *
+ * @param  string $brand
+ * @return string
+ */
+public function setbrand($brand) {
+    $this->brand = $brand;
+}
+}   <== marque la fin des des methodes appliquées à la classe déclarée en haut de page.
+
+
+Le MVC, pour Model, View, Controller  est un environnement de travail sous forme d'une architecture donnée.
+Il permet une sorte d'harmonisation dans la création, c'est une sorte de guide de bienséance, de manière de faire.
+
+en tant qu'utilisateur nous voyons des vue (views).
+chaque actions que nous faisons sur cette vue est soumise au controlleur. Celui-ci, après consultation du modèle, enverra une autre vue soumise par le modèle et validée
+par le controlleur en fonction des droits du modèle, (visiteur / utilisateur / administrateur).
+Le controlleur est une sorte de pivot.
+
+
