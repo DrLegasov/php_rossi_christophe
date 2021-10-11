@@ -73,6 +73,54 @@ class Category{
 
         return $this;
     }
+    
+    
+    /**
+     * pushCategory
+     *
+     * @param  array $categories
+     * @return void
+     */
+    public function pushCategory(&$categories){
+        array_push($categories, $this);
+    }
+
+    /**
+     * deleteCategory afin de supprimer une catégorie de la liste.
+     *
+     * @param  array $categories
+     * @param  int $index
+     * @return void
+     */
+    public function deleteCategory(&$categories, $index){
+        unset($categories[$index]);
+    }
+    
+    /**
+     * updatecategory afin de mettre à jour les paramètres d'une catégorie définie.
+     *
+     * @param  array $category
+     * @param  string $name
+     * @param  string $shortDescription
+     * @param  string $orderNumber
+     * @return object
+     */
+    public function updatecategory(&$category, $name='', $shortDescription='', $orderNumber=''){
+        $index = array_search($this, $category);
+
+        if(!empty($name)):
+            $category[$index]->name = $name;
+        endif;
+
+        if(!empty($shortDescription)):
+            $category[$index]->shortDescription = $shortDescription;
+        endif;
+
+        if(!empty($orderNumber)):
+            $category[$index]->orderNumber = $orderNumber;
+        endif;
+    }
+
 
     public function getCategoriesList() {
 
