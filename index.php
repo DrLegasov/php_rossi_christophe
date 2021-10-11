@@ -14,6 +14,10 @@ if(!empty($_GET['action'])):
                                     require('controllers/articlesController.php');
                                     break;*/
 
+                                    case 'categoryDelete':
+                                        include('controllers/categoriesDeleteController.php');
+                                        break;
+
                                 case 'categoryForm':
                                     require('views/categoryForm.php');
                                     break;

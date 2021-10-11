@@ -79,7 +79,7 @@ endif;
                     </p>
                     <p>
                         <label for="shortDescription">Description</label><br>
-                        <input type="number" id="shortDescription" name="shortDescription">
+                        <input type="text" id="shortDescription" name="shortDescription">
                     </p>
                     <p>
                         <label for="orderNumber">Numéro d'ordre</label><br>
@@ -89,7 +89,6 @@ endif;
                         <input class="btn btn-outline-success" type="submit" name="Valider" value="Valider">
                     </p>
                 </form>
-
             </div>
         </div>
 

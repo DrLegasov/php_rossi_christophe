@@ -56,55 +56,44 @@ $categories = array(
     <header>
         <h2>Mobilier IKESLA</h2>
     </header>
-        <div class="container justify-content-center">
-            <div class="row d-flex justify-content-center">
-                <?php if(count($categories)>0): ?>
-                    <a class="btn btn-success" href="categoryForm.php">Ajouter une nouvelle catégorie</a>
-                <table>
-                    <?php
+    <div class="container justify-content-center">
+        <div class="row d-flex justify-content-center">
+            <?php if(count($categories)>0): ?>
+            <a class="btn btn-success" href="views/categoryForm.php">Ajouter une nouvelle catégorie</a>
+            <table>
+                <?php
                         //boucle permettant un affichage des categories une par une.
                     foreach($categories as $category => $stat):    
                     ?>
-                    <tr> 
-                        <td><?php echo $category; ?></td>
-                        <td>
+                <tr>
+                    <td><?php echo $category; ?></td>
+                    <td>
                         <?php
                         if(count($stat)>0):
                         ?>
-                            <ul>
-                                
-                                <?php
-                                // affichage des stat par catégorie.
-                                foreach($stat as  $cat): ?> 
-    
-                                <li><?php echo $cat; ?></li>
-    
-                                <?php endforeach; ?>
-    
-                            </ul>
+                        <ul>
+                            <?php
+                                // affichage des stat par catégorie dans une liste à puces.
+                                foreach($stat as  $cat): ?>
+                            <li><?php echo $cat; ?></li>
+                            <?php endforeach; ?>
+                        </ul>
                         <?php endif; ?>
-    
-                        </td>
-                        <td><button class="btn btn-outline-info">Édit</button></td>
-                        <td><button class="btn btn-outline-danger">Delete</button></td>
-                    </tr> 
-    
-                    <?php endforeach; ?>
-    
-                </table>
-    
-                <?php endif; ?>
-            </div>
-
-            
+                    </td>
+                    <td><button class="btn btn-outline-info">Édit</button></td>
+                    <td><button class="btn btn-outline-danger"><a href="controllers/categoryDeleteController.php"></a> Delete</button></td>
+                </tr>
+                <?php endforeach; ?>
+            </table>
+            <?php endif; ?>
         </div>
-
+    </div>
     <footer>
     </footer>
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-        </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
 
 </body>
 
