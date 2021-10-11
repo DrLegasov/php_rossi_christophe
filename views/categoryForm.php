@@ -1,12 +1,12 @@
 <?php
-
+//gestion des erreurs
 if (!empty($_POST['Valider'])):
 $name = $_POST['name'] ;
 $shortDescription = $_POST['shortDescription'] ;
 $orderNumber = $_POST['orderNumber'] ;
 endif;
 $NotYet = "Tous les champs sont obligatoires!!!";
-
+//tableau dans lequel on empile les erreurs
 $ErrorsStackTab = array();
 
 if(empty($name)): 
@@ -67,6 +67,7 @@ endif;
                     <hr>
                     <?php endif  ;?>
                 <?php
+                //ici nous renvoyons les erreurs empilées dans le tableau.
         foreach($ErrorsStackTab as $error):
         ?>
         <p>- <?php echo $error; ?></p>

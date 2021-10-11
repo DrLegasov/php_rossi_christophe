@@ -1,7 +1,7 @@
 <?php
 
 //appel du fichier model "once" une seule fois pour palier d'éventuelles erreurs ultérieures.
-require_once('models/categoryModel.php');
+    require_once('models/categoryModel.php');
 
 //appel des méthode générée dans le model.php''
 
@@ -14,7 +14,7 @@ $oRange->pushCategory($categories);*/
 
 
 
-include('views/categoriesList.php');
+    include('views/categoriesList.php');
 
 
 ?>

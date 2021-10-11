@@ -152,9 +152,9 @@ function ttc($ht,$tva){
     }
 
     /**
-     * pushCategory
+     * addArticle
      *
-     * @param  array $categories
+     * @param  array $article
      * @return void
      */
     public function addArticle(&$article){
@@ -162,7 +162,7 @@ function ttc($ht,$tva){
     }
 
     /**
-     * deleteCategory afin de supprimer une catégorie de la liste.
+     * deleteCategory afin de supprimer un article de la liste.
      *
      * @param  array $categories
      * @param  int $index
@@ -172,13 +172,17 @@ function ttc($ht,$tva){
         unset($article[$index]);
     }
     
+        
     /**
-     * updatecategory afin de mettre à jour les paramètres d'une catégorie définie.
+     * updateArticle
      *
-     * @param  array $category
+     * @param  array $article
      * @param  string $name
-     * @param  string $shortDescription
-     * @param  string $orderNumber
+     * @param  string $longDescription
+     * @param  string $link
+     * @param  int $cost
+     * @param  string $designer
+     * @param  string $designerMail
      * @return object
      */
     public function updateArticle(&$category, $name='', $longDescription='', $link='', $cost='', $designer='', $designerMail=''){
@@ -211,6 +215,19 @@ function ttc($ht,$tva){
     }
 
     /*$Article = array( );                    
-                return $Article;*/
+                return $Article;
+                empty
+                empty
+                empty
+                empty
+                empty
+                empty
+                empty
+                empty
+                empty
+                empty
+                empty
+                empty          
+                    */
 
 }

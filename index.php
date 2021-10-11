@@ -1,10 +1,12 @@
 <?php
 
+//dispatcher artisanal permettant la navigation entre les fichiers en récupérant grâce au GET la fin de l'url et en redirigant en fonction de "action"
 
 if(!empty($_GET['action'])):
     
     switch ($_GET ['action']) {
                                 case 'categoriesList':
+                                    //'action' = categoriesList donc dans ce GET l'instruction est la suivante.
                                     require('controllers/categoriesController.php');
                                     break;
 

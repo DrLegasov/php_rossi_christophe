@@ -1,4 +1,6 @@
 <?php
+
+
 $categories = array(
     array(
         "name" =>'Produits',
@@ -60,7 +62,7 @@ $categories = array(
                     <a class="btn btn-success" href="categoryForm.php">Ajouter une nouvelle catégorie</a>
                 <table>
                     <?php
-
+                        //boucle permettant un affichage des categories une par une.
                     foreach($categories as $category => $stat):    
                     ?>
                     <tr> 
@@ -72,6 +74,7 @@ $categories = array(
                             <ul>
                                 
                                 <?php
+                                // affichage des stat par catégorie.
                                 foreach($stat as  $cat): ?> 
     
                                 <li><?php echo $cat; ?></li>

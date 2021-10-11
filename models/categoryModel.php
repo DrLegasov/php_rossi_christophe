@@ -1,15 +1,15 @@
 <?php
 
 class Category{
-    private $name;
-    private $shortDescription;
-    private $orderNumber;
+            private $name;
+            private $shortDescription;
+            private $orderNumber;
 
 
     public function __construct($name='', $shortDescription='', $orderNumber=''){
-        $this->name = $name;
-        $this->shortDescription = $shortDescription;
-        $this->orderNumber = $orderNumber;
+            $this->name = $name;
+            $this->shortDescription = $shortDescription;
+            $this->orderNumber = $orderNumber;
     }
 
 
